@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- BS SETUP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- CSS SETUP -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Sugarcloud Café - Order</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #2B221D;">
+        <div class="container-fluid">
+            <a class="navbar-brand text-light fw-bold" href="index.html">˚₊‧꒰ა 𝕊𝕦𝕘𝕒𝕣𝕔𝕝𝕠𝕦𝕕 ℂ𝕒𝕗é ໒꒱ ‧₊˚</a>
+            <div class="ms-auto">
+                <a class="nav-link text-light d-inline mx-2" href="index.html">˖⁺♡ ʜᴏᴍᴇ ೀ</a>
+                <a class="nav-link text-light d-inline mx-2" href="order.html">˖⁺♡ ᴏʀᴅᴇʀ ɴᴏᴡ ೀ</a>
+                <a class="nav-link text-light d-inline mx-2" href="contact.html">˖⁺♡ ᴄᴏɴᴛᴀᴄᴛ ᴜꜱ ೀ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container rounded shadow mt-4">
+        <h2>˗ˏˋ ★ ꜱᴜɢᴀʀᴄʟᴏᴜᴅ ᴄᴀꜰᴇ ★ ˎˊ˗</h2>
+        <p>˖⁺✧ ꜰᴏᴏᴅ ᴏʀᴅᴇʀɪɴɢ ꜱʏꜱᴛᴇᴍ ⁺໒꒱ིྀ༝</p>
+
+        <form id="orderForm">
+            <label>♡ ɴᴀᴍᴇ:</label>
+            <input type="text" id="name"><br>
+
+            <label>♡ ᴀᴅᴅʀᴇꜱꜱ:</label>
+            <input type="text" id="address"><br>
+
+            <label>♡ ᴄᴏɴᴛᴀᴄᴛ ɴᴏ.:</label>
+            <input type="text" id="contact"><br><br>
+            
+            <div class="button-bar text-center">
+                <button id="submit" py-click="compute_total()">🍨 ꜱᴜʙᴍɪᴛ ᴏʀᴅᴇʀ ೀ⊹˚.</button>
+                <button id="clear" py-click="clear_form()">🍨 ᴄʟᴇᴀʀ ೀ⊹˚.</button>
+            </div>
+            <hr>
+            <h4>ᴍᴇɴᴜ</h4>
+            <input type="checkbox" id="item1" value="103">ᛝ ᴄʜᴏᴄᴏʙᴇʀʀʏ ɪᴄᴇ ᴄʀᴇᴀᴍ ꜱᴀɴᴅᴡɪᴄʜ (₱103) ᵎᵎ<br>
+            <input type="checkbox" id="item2" value="163">ᛝ ᴄʟᴀꜱꜱɪᴄ ɴᴇᴀᴘᴏʟɪᴛᴀɴ ꜱᴍᴏᴏᴛʜɪᴇ (₱163) ᵎᵎ<br>
+            <input type="checkbox" id="item3" value="800">ᛝ ꜱᴛʀᴀᴡʙᴇʀʀʏ ꜱʜᴏʀᴛᴄᴀᴋᴇ (₱800) ᵎᵎ<br>
+            <input type="checkbox" id="item4" value="185">ᛝ ᴄᴏᴄᴏᴀ ᴄʀᴇᴀᴍ ꜰʀᴀᴘᴘᴇ (₱185) ᵎᵎ<br>
+            <input type="checkbox" id="item5" value="235">ᛝ ɴᴇᴀᴘᴏʟɪᴛᴀɴ ᴄʀᴇᴘᴇ ʀᴏʟʟ (₱235) ᵎᵎ<br><br>
+        
+            <div class="d-flex justify-content-center gap-3 flex-wrap" id="image-gallery-bs" style="margin-top:3px; margin-bottom: 3px">
+                <img src="crepe.jpg" alt="Neapolitan Crepe">
+                <img src="smoothie.jpg" alt="Classic Neapolitan Smoothie">
+            </div>
+        </form>
+
+        <div id="summary" class="output"></div>
+
+        <py-script src="main.py"></py-script>
+    </div>
+</body>
+</html>
